@@ -9,8 +9,9 @@ body {
   background-color: #121212;
   color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; /* Centraliza o conteúdo horizontalmente */
   min-height: 100vh;
   margin: 0;
 }
@@ -23,6 +24,13 @@ body {
   border-radius: 10px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se ajustem automaticamente em várias linhas */
+  justify-content: center; /* Centraliza os itens dentro do container */
+  padding-bottom: 40px; /* Adiciona espaço extra abaixo dos itens */
+}
+.container .item {
+  margin: 10px; /* Adiciona espaçamento entre os itens */
 }
 
 h1 {
@@ -61,7 +69,7 @@ img {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  max-height: 450px;
+  max-height: 420px;
 }
 
 figcaption {
@@ -79,12 +87,26 @@ audio {
   width: 100%; /* O player de áudio ocupa 100% da largura disponível */
 }
 
-@media (max-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr; /* Em telas menores, apenas uma coluna */
-  }
+footer {
+  background-color: #1f1f1f;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid #292929;
+  margin-top: 40px; /* Espaço extra acima do footer */
+}
 
-  h1 {
-    font-size: 1.5rem;
-  }
+.footer-content p {
+  margin: 10px 0;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+}
+
+.footer-content a {
+  color: #4db8ff;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
 }
